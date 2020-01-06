@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/java"/>
+	<classpathentry kind="src" path="src/java-ut"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/brilliance-lib-java"/>
+	<classpathentry kind="lib" path="/home/dvos/workspaces/core/eos-ts-core/tickeos-core-model/target/tickeos-core-model-7.38.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/workspaces/core/eos-ts-core/tickeos-core-service-impl/target/tickeos-core-service-impl-7.38.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/google/collections/google-collections/1.0/google-collections-1.0.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/workspaces/core/eos-ts-core/tickeos-core-shared/target/tickeos-core-shared-7.38.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/eosuptrade/shared/shared-model/5.18.0/shared-model-5.18.0.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/eosuptrade/shared/shared-el-function/5.18.0/shared-el-function-5.18.0.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/workspaces/core/eos-ts-core/tickeos-core-model-dto/target/tickeos-core-model-dto-7.38.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/eos/ts/utilities/utilities-serializer/1.99.0/utilities-serializer-1.99.0.jar"/>
+	<classpathentry kind="lib" path="/home/dvos/.m2/repository/com/eos/ts/utilities/utilities-exception/1.99.0/utilities-exception-1.99.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Fpel"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

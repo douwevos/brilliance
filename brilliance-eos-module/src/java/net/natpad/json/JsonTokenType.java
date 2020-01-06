@@ -1,0 +1,12 @@
+package net.natpad.json;
+
+public enum JsonTokenType {
+
+	EOT, QUOTED_STRING, COLON, COMMA, NUMBER, TRUE, FALSE, NULL, LEFT_BRACE, RIGHT_BRACE, LEFT_BRACKET, RIGHT_BRACKET
+	
+	
+	
+	,
+	ATTRIBUTE_NAME
+	
+}

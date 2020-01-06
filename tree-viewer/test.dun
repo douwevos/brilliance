@@ -1,0 +1,47 @@
+module {
+
+	name 'tree-viewer-test';
+	
+	dependencies {
+		module 'tree-viewer';
+		module 'gtk3';
+	}
+
+	clear {
+		remove '[%=module.builddir%]';
+	}
+
+	compile {
+		cc {
+			natpad.cc.args {}
+			src { path './src-ut/'; }  
+			destdir './compiled-ut/';
+			depdir 'deps-ut'; 
+		}
+	}
+
+	package {
+
+	
+		clink {
+			src { path './compiled-ut/'; }
+			output './treeviewer-ut';
+			natpad.cc.args {}
+		}
+
+
+	}	
+
+
+	export {
+		lib {
+			path '.';
+			libname 'treeviewer-ut';
+		}
+		headers {
+			dir './src-ut/';
+		}
+	}
+
+
+}

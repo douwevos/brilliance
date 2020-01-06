@@ -1,0 +1,58 @@
+module {
+
+	name 'brilliance-lib-java';
+	
+	
+	destPath '[%=module.builddir%]';
+	
+	dependencies {
+		module 'java';
+	}
+	
+	clear {
+		remove '[%=module.builddir%]';
+	}
+	
+	compile {
+
+	
+		javac {
+			src { path './src/java'; }
+			destdir './compiled/';
+		}	
+	
+	
+		exec {
+			dir '[%=module.directory%]';
+			executable '/usr/bin/javac';
+			arg '-h';
+			arg '[%destPath%]';
+			arg './src/java/net/natpad/brilliance/caterpillar/StringWo.java';
+		}
+
+
+		jni {
+			src { path './src/java'; }
+			destdir '[%destPath%]';
+		}	
+
+
+	}
+
+
+	package {
+		jar {
+			in { path './compiled/'; }
+			destfile './brilliance-lib.jar';
+		}
+	}
+	
+	export {
+		headers {
+			dir '[%destPath%]';
+		}
+	
+	}	
+
+	
+}

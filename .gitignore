@@ -1,0 +1,6 @@
+dung/
+Debug/
+src-generated/
+*.class
+*~
+.metadata/

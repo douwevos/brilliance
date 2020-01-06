@@ -1,0 +1,51 @@
+module {
+
+	name 'ide-main';
+	
+	dependencies {
+		module 'brilliance-lib-jni';
+		module 'gtk3';
+		module 'java';
+	}
+	
+	needed {
+		module 'caterpillar';
+		module 'worm';
+		module 'brilliance-lib-java';
+	}
+
+	clear {
+		remove '[%=module.builddir%]';
+	}
+
+	compile {
+		cc { 
+			src { path './src/'; }  
+			cc.args {}
+			destdir './compiled/'; 
+			depdir 'deps'; 
+		}
+	}
+
+	package {
+	
+	
+		clink {
+			src { path './compiled/'; }
+			output './ide-main';
+			cc.args {}
+		}
+	}	
+
+
+	export {
+		lib {
+			file './ide-main';
+		}
+		headers {
+			dir './src/';
+		}
+	}
+
+
+}

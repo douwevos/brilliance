@@ -1,0 +1,40 @@
+module {
+
+	name 'tree-viewer';
+	
+	dependencies {
+		module 'gtk3';
+		module 'caterpillar';
+	}
+
+	clear {
+		remove '[%=module.builddir%]';
+	}
+
+	compile {
+		cc { 
+			natpad.cc.args {}
+			arg '-fPIC';
+			src { path './src/'; } 
+			destdir './compiled/'; 
+			depdir './deps/';
+		}
+	}
+
+	package {
+		ar { srcdir './compiled/'; destfile './libbrilliance-tree-viewer.a'; }
+	}	
+
+
+	export {
+		lib {
+			path '.';
+			libname 'brilliance-tree-viewer';
+		}
+		headers {
+			dir './src/';
+		}
+	}
+
+
+}

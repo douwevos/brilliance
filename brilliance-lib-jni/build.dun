@@ -1,0 +1,61 @@
+module {
+
+	name 'brilliance-lib-jni';
+	
+	needed {
+		module 'gtk3';
+		module 'java';
+		module 'brilliance-lib-java';
+		module 'leafhopper';
+		module 'caterpillar';
+		module 'worm';
+		module 'chameleon';
+		module 'dragonfly';
+		module 'cow';
+		module 'shoveler';
+		module 'tree-viewer';
+	}
+
+   dependencies {
+   }
+	
+
+	compile {
+		cc { 
+			src { path './src/c/'; }
+			natpad.cc.args {}
+			arg '-O0';
+			arg '-ggdb';
+			arg '-fPIC';
+			arg '-Wall';
+		
+			destdir './compiled/'; 
+			depdir 'deps';
+		}
+	}
+	
+	package {
+	
+		linkSharedLib {
+			output 'libbrilliancejni.so';
+			wholeArchive 'leafhopper';
+			wholeArchive 'caterpillar';
+			wholeArchive 'worm';
+			wholeArchive 'tree-viewer';
+			src { path './compiled/'; }
+		}
+	
+	}
+	
+	export {
+		lib {
+			path '.';
+			libname 'brilliancejni';
+		}
+		headers {
+			dir './src/c/';
+		}
+		
+	}	
+	
+}
